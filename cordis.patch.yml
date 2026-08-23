@@ -1,0 +1,9 @@
+# @dsh-external/offpeak-gate bundle patch.
+#
+# 把低峰闸门插件插入 profile。行 id 不能与官方 bundle patch 拥有的行
+# 重复（重复 id 会触发 loader 报错）；用户自己的 profile cordis.patch.yml
+# 最后应用，可覆盖本行。
+- insert:
+    - id: offpeak-gate
+      name: "@dsh-external/offpeak-gate"
+      config: {}
